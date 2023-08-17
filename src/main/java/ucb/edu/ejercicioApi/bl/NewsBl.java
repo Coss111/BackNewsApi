@@ -35,6 +35,7 @@ public class NewsBl {
     private NewsDao newsDao;
 
     public News fetchAndSaveNews(){
+        apiUrl = apiUrl + "?access_key=" + apiKey;
         logger.debug("Obteniendo datos de la noticia desde la URL: {}", apiUrl);
         ResponseEntity<News> response = restTemplate.getForEntity(apiUrl, News.class);
 

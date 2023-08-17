@@ -27,6 +27,7 @@ public class NewsApi {
         try {
             logger.info("Iniciando el proceso para obtener y guardar una noticia mediante el endpoint /fetch.");
             News noticia = newsBl.fetchAndSaveNews();
+            logger.info(noticia.toString());
             return new ResponseEntity<>(new ResponseDto<>(200, noticia, "Noticia guardada exitosamente"), HttpStatus.OK);
 
         } catch (RuntimeException e) {
