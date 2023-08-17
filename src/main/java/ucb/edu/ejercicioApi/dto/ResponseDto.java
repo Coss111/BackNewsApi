@@ -9,6 +9,11 @@ public class ResponseDto<T> {
     public ResponseDto() {
     }
 
+    public ResponseDto(int statusCodeValue, String s) {
+        this.code = statusCodeValue;
+        this.message = s;
+    }
+
     public ResponseDto(Integer code, T data, String message) {
         this.code = code;
         this.data = data;

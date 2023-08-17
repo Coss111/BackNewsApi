@@ -5,11 +5,14 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5433/advice_db
     username: postgres
-    password: admin1234   #Contraseña Cosette
-    #password: jose       #Contraseña Jose
+    password: admin1234
     driver-class-name: org.postgresql.Driver
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: none
     show-sql: true
+
+Api:
+  url: http://api.mediastack.com/v1/news
+  key: 3513229c530addc65459218af3a3abab

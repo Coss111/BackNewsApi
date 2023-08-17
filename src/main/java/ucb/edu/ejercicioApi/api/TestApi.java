@@ -6,9 +6,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 @RestController
 @RequestMapping("/api/v1/saludar")
 public class TestApi {
+    private static Logger logger = LoggerFactory.getLogger(TestApi.class);
 
     @GetMapping("")
     public ResponseEntity<String> saludar() {
