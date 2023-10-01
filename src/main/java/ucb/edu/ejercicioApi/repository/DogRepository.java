@@ -11,7 +11,7 @@ import org.springframework.data.repository.query.Param;
 public interface DogRepository extends JpaRepository<DogEntity, Long> {
 
     @Override
-    @Query(value = "SELECT dog WHERE active = true AND id_dog = :id", nativeQuery = true)
+    //@Query(value = "SELECT dog WHERE active = true AND id_dog = :id", nativeQuery = true)
     Page<DogEntity> findAll(Pageable pageable);
     
 
