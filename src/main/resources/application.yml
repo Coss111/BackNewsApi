@@ -3,15 +3,20 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5433/advice_db
+    url: jdbc:postgresql://localhost:5433/pets_db
     username: postgres
     password: admin1234
     driver-class-name: org.postgresql.Driver
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
-      ddl-auto: none
-    show-sql: true
+      ddl-auto: update
+      show-sql: true
 Api:
-  url: http://api.mediastack.com/v1/news
-  key: 3513229c530addc65459218af3a3abab
+  url: https://http.dog
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+
+      org.springframework.security: DEBUG
